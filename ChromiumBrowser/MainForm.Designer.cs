@@ -29,6 +29,7 @@ namespace ChromiumBrowser
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.pContainer = new System.Windows.Forms.Panel();
             this.goButton = new System.Windows.Forms.Button();
             this.optionsButton = new System.Windows.Forms.Button();
@@ -36,6 +37,8 @@ namespace ChromiumBrowser
             this.refreshButton = new System.Windows.Forms.Button();
             this.forwardButton = new System.Windows.Forms.Button();
             this.urlTextBox = new System.Windows.Forms.TextBox();
+            this.richTextBox1 = new System.Windows.Forms.RichTextBox();
+            this.richTextBox2 = new System.Windows.Forms.RichTextBox();
             this.SuspendLayout();
             // 
             // pContainer
@@ -46,18 +49,17 @@ namespace ChromiumBrowser
             this.pContainer.Location = new System.Drawing.Point(3, 32);
             this.pContainer.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.pContainer.Name = "pContainer";
-            this.pContainer.Size = new System.Drawing.Size(1110, 728);
+            this.pContainer.Size = new System.Drawing.Size(1110, 546);
             this.pContainer.TabIndex = 5;
-            
             // 
             // goButton
             // 
             this.goButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.goButton.Image = global::ChromiumBrowser.Properties.Resources.Go;
-            this.goButton.Location = new System.Drawing.Point(1043, 3);
+            this.goButton.Location = new System.Drawing.Point(1037, 3);
             this.goButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.goButton.Name = "goButton";
-            this.goButton.Size = new System.Drawing.Size(70, 26);
+            this.goButton.Size = new System.Drawing.Size(76, 26);
             this.goButton.TabIndex = 4;
             this.goButton.UseVisualStyleBackColor = true;
             this.goButton.Click += new System.EventHandler(this.goButton_Click);
@@ -89,10 +91,10 @@ namespace ChromiumBrowser
             // refreshButton
             // 
             this.refreshButton.Image = global::ChromiumBrowser.Properties.Resources.Refresh;
-            this.refreshButton.Location = new System.Drawing.Point(121, 3);
+            this.refreshButton.Location = new System.Drawing.Point(103, 4);
             this.refreshButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.refreshButton.Name = "refreshButton";
-            this.refreshButton.Size = new System.Drawing.Size(32, 25);
+            this.refreshButton.Size = new System.Drawing.Size(41, 25);
             this.refreshButton.TabIndex = 2;
             this.refreshButton.UseVisualStyleBackColor = true;
             this.refreshButton.Click += new System.EventHandler(this.refreshButton_Click);
@@ -100,7 +102,7 @@ namespace ChromiumBrowser
             // forwardButton
             // 
             this.forwardButton.Image = global::ChromiumBrowser.Properties.Resources.rightArrow__2_;
-            this.forwardButton.Location = new System.Drawing.Point(75, 4);
+            this.forwardButton.Location = new System.Drawing.Point(66, 4);
             this.forwardButton.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.forwardButton.Name = "forwardButton";
             this.forwardButton.Size = new System.Drawing.Size(38, 25);
@@ -113,11 +115,29 @@ namespace ChromiumBrowser
             this.urlTextBox.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.urlTextBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.urlTextBox.Location = new System.Drawing.Point(168, 6);
+            this.urlTextBox.Location = new System.Drawing.Point(152, 6);
             this.urlTextBox.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.urlTextBox.Name = "urlTextBox";
-            this.urlTextBox.Size = new System.Drawing.Size(867, 20);
+            this.urlTextBox.Size = new System.Drawing.Size(883, 20);
             this.urlTextBox.TabIndex = 3;
+            // 
+            // richTextBox1
+            // 
+            this.richTextBox1.Font = new System.Drawing.Font("Adobe Devanagari", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox1.Location = new System.Drawing.Point(4, 584);
+            this.richTextBox1.Name = "richTextBox1";
+            this.richTextBox1.Size = new System.Drawing.Size(555, 174);
+            this.richTextBox1.TabIndex = 0;
+            this.richTextBox1.Text = "";
+            // 
+            // richTextBox2
+            // 
+            this.richTextBox2.Font = new System.Drawing.Font("Adobe Devanagari", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.richTextBox2.Location = new System.Drawing.Point(589, 584);
+            this.richTextBox2.Name = "richTextBox2";
+            this.richTextBox2.Size = new System.Drawing.Size(517, 174);
+            this.richTextBox2.TabIndex = 8;
+            this.richTextBox2.Text = "";
             // 
             // MainForm
             // 
@@ -126,6 +146,8 @@ namespace ChromiumBrowser
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.ClientSize = new System.Drawing.Size(1118, 770);
+            this.Controls.Add(this.richTextBox2);
+            this.Controls.Add(this.richTextBox1);
             this.Controls.Add(this.urlTextBox);
             this.Controls.Add(this.optionsButton);
             this.Controls.Add(this.backButton);
@@ -134,13 +156,14 @@ namespace ChromiumBrowser
             this.Controls.Add(this.refreshButton);
             this.Controls.Add(this.forwardButton);
             this.Font = new System.Drawing.Font("Eurostile Extended", 8.249999F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.IsMdiContainer = true;
             this.Margin = new System.Windows.Forms.Padding(4, 3, 4, 3);
             this.Name = "MainForm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Company Co. Browser";
             this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.MainForm_FormClosing);
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.Browser_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -154,6 +177,8 @@ namespace ChromiumBrowser
         private System.Windows.Forms.Button backButton;
         private System.Windows.Forms.Button optionsButton;
         private System.Windows.Forms.TextBox urlTextBox;
+        private System.Windows.Forms.RichTextBox richTextBox1;
+        private System.Windows.Forms.RichTextBox richTextBox2;
     }
 }
 

@@ -59,7 +59,6 @@ namespace ChromiumBrowser
             this.loginButton.Text = "LOGIN";
             this.loginButton.UseVisualStyleBackColor = true;
             this.loginButton.Click += new System.EventHandler(this.loginButton_click);
-            
             // 
             // usernameBox
             // 
@@ -67,6 +66,7 @@ namespace ChromiumBrowser
             this.usernameBox.Name = "usernameBox";
             this.usernameBox.Size = new System.Drawing.Size(157, 20);
             this.usernameBox.TabIndex = 4;
+            this.usernameBox.Text = "user";
             // 
             // passwordBox
             // 
@@ -74,6 +74,7 @@ namespace ChromiumBrowser
             this.passwordBox.Name = "passwordBox";
             this.passwordBox.Size = new System.Drawing.Size(157, 20);
             this.passwordBox.TabIndex = 5;
+            this.passwordBox.Text = "pass";
             // 
             // label1
             // 
